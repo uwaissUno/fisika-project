@@ -10,13 +10,15 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Hero from "@/layouts/Hero";
 import Navbar from "@/components/Navbar";
-import SwiperContainer from "@/components/Swiper";
+import res from '../../db/members.json';
+// import SwiperContainer from "@/components/Swiper";
 
-export default async function Home() {
-  const res = await fetch("http://localhost:3000/api/name").then((res) =>
-    res.json()
-  );
-  const members = res.data;
+export default function Home() {
+  // const res = await fetch("http://localhost:3000/api/name").then((res) =>
+  //   res.json()
+  // );
+  const members = res
+  console.log(res)
   console.log();
   return (
     <>
