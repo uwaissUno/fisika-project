@@ -1,4 +1,4 @@
-"use client";
+
 import { TypeAnimation } from "react-type-animation";
 import { Swiper, SwiperSlide } from "swiper/react";
 
