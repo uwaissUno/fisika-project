@@ -34,7 +34,7 @@ export default async function SwiperContainer(){
           {" "}
           {members && members.map((member: any) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={member.id}>
                 <div className="w-64 mx-auto bg-white/30 backdrop-blur-md rounded-md p-4 flex  flex-col items-center">
                   <div className="w-36 h-36 rounded-full overflow-hidden mt-4 object-center">
                     <img
