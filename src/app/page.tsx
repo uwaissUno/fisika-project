@@ -1,5 +1,5 @@
+"use client";
 
-import { TypeAnimation } from "react-type-animation";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-
 import Hero from "@/layouts/Hero";
 import Navbar from "@/components/Navbar";
+import SwiperContainer from "@/components/Swiper";
 
 export default async function Home() {
   const res = await fetch("http://localhost:3000/api/name").then((res) =>
@@ -49,7 +49,6 @@ export default async function Home() {
             />
           </p>
         </div> */}
-        
       </div>
       <div className="w-full h-screen bg-purple-600 border-slate-300 border-t-2 flex flex-col items-center">
         <h1 className="my-4 text-3xl font-montserrat font-semibold text-center text-white">
@@ -75,28 +74,30 @@ export default async function Home() {
           className="mySwiper w-full"
         >
           {" "}
-          {members.map((member: any) => {
-            return (
-              <SwiperSlide>
-                <div className="w-64 mx-auto bg-white/30 backdrop-blur-md rounded-md p-4 flex  flex-col items-center">
-                  <div className="w-36 h-36 rounded-full overflow-hidden mt-4 object-center">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3n6OUTASI71uCdxQOel9o3-Rsh2D9zof2A&usqp=CAU"
-                      alt=""
-                    />
+          {members &&
+            members.map((member: any) => {
+              return (
+                <SwiperSlide key={member.id}>
+                  <div className="w-64 mx-auto bg-white/30 backdrop-blur-md rounded-md p-4 flex  flex-col items-center">
+                    <div className="w-36 h-36 rounded-full overflow-hidden mt-4 object-center">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3n6OUTASI71uCdxQOel9o3-Rsh2D9zof2A&usqp=CAU"
+                        alt=""
+                      />
+                    </div>
+                    <h1 className="text-2xl font-montserrat font-semibold mt-3 text-center">
+                      {member.name.charAt(0).toUpperCase() +
+                        member.name.slice(1).toLowerCase()}
+                    </h1>
+                    <p className="w-full text-center">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis sapiente expedita Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Consequuntur, a.
+                    </p>
                   </div>
-                  <h1 className="text-2xl font-montserrat font-semibold mt-3 text-center">
-                  {member.name.charAt(0).toUpperCase() + member.name.slice(1).toLowerCase()}
-                  </h1>
-                  <p className="w-full text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nobis sapiente expedita Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Consequuntur, a.
-                  </p>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
     </>
