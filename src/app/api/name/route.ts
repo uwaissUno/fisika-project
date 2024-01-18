@@ -8,13 +8,13 @@ export async function GET() {
     { id: 4, name: "Naurah Calista Ramadhani", absen: 21 , image : '/image/nura.jpg' },
     { id: 5, name: "Hiyasatakunu A.A.M", absen: 13 },
     { id: 6, name: "Athifa Zaina Anggraeni" },
-    { id: 7, name: "Devia Salsabila" },
+    { id: 7, name: "Devia Salsabila" , image: "/image/kepik.jpg" },
     { id: 8, name: "Hita Tuhu F." },
     {
       id: 9,
       name: "Moch Ridho Zulqornain",
       image:
-        "https://i.postimg.cc/LswpYkht/Whats-App-Image-2024-01-16-at-13-50-26.jpg",
+        "/image/ridho.jpg",
     },
     { id: 10, name: "Naufal Arga Rizky Pratama", absen: 20 },
     { id: 11, name: "Fawwaz Safaraz n" },
