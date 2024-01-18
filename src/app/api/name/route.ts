@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const members = [
     { id: 1, name: "Rana Jihan S." },
-    { id: 2, name: "Citra Hadi N." },
+    { id: 2, name: "Citra Hadi N.", image : "/image/tyas.jpg" },
     { id: 3, name: "Aisyatul Khumairoh", absen: 1, image: "/image/tutul.jpg" },
-    { id: 4, name: "Naurah Calista Ramadhani", absen: 21 },
+    { id: 4, name: "Naurah Calista Ramadhani", absen: 21 , image : '/image/nura.jpg' },
     { id: 5, name: "Hiyasatakunu A.A.M", absen: 13 },
     { id: 6, name: "Athifa Zaina Anggraeni" },
     { id: 7, name: "Devia Salsabila" },
