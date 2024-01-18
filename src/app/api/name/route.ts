@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET( ) {
+export async function GET() {
   const members = [
     { "id": 1, "name": "Rana Jihan S." },
     { "id": 2, "name": "Citra Hadi N." },
