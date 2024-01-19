@@ -8,7 +8,7 @@ export async function GET() {
     { id: 4, name: "Naurah Calista Ramadhani", absen: 21 , image : '/image/nura.jpg' },
     { id: 5, name: "Hiyasatakunu A.A.M", absen: 13 },
     { id: 6, name: "Athifa Zaina Anggraeni" },
-    { id: 7, name: "Devia Salsabila" , image: "/image/kepik.jpg" },
+    { id: 7, name: "Devia Salsabila" , image: "/image/kepik.jpg", absen : 9},
     { id: 8, name: "Hita Tuhu F." },
     {
       id: 9,
